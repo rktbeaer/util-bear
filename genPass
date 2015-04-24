@@ -8,5 +8,6 @@ def get_rand_alpha_num():
 	elif r >= 10 and r < 35: return chr((r-10)+65)
 	elif r >= 35 and r < 60: return chr((r-35)+97)
 
-password = [get_rand_alpha_num() for i in range(0,12)]
-print "".join(password)
+passwordChar = [get_rand_alpha_num() for i in range(0,12)]
+password = ["".join(passwordChar[i:i+3]) for i in range(0, len(passwordChar), 3)]
+print "-".join(password)

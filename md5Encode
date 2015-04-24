@@ -1,0 +1,12 @@
+#!/usr/bin/python
+
+import md5
+import sys
+
+if len(sys.argv) < 2:
+	print "Usage: md5Encode <utf8_string>"
+	sys.exit(1)
+
+m = md5.new()
+m.update(sys.argv[1])
+print m.hexdigest()

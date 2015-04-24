@@ -1,0 +1,10 @@
+#!/usr/bin/python
+
+from base64 import b64encode
+import sys
+
+if len(sys.argv) < 2:
+	print "Usage: base64Encode <utf8_string>"
+	sys.exit(1)
+
+print b64encode(sys.argv[1])

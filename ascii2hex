@@ -1,0 +1,11 @@
+#!/usr/bin/python
+
+import sys
+
+if len(sys.argv) < 2:
+	print "Usage: ascii2hex <ascii_str>"
+	sys.exit(1)
+
+ascii = sys.argv[1]
+num = [format(ord(c), 'x') for c in ascii]
+print "".join(num)
